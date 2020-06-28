@@ -1,0 +1,26 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'AzureARMPipeline-Conn'
+    subscriptionId: '311a2a45-7155-40c8-984d-1b3d8ca182fb'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'AzureARMPipelineRG'
+    location: 'Central US'
+    templateLocation: 'Linked artifact'
+    csmFile: 'CreateWebApp/azuredeploy.json'
+    overrideParameters: '-projectName FruitBasket -linkedTemplateUri https://raw.githubusercontent.com/Selvastudy2020/FruitBasket-Repo/master/CreateWebApp/linkedStorageAccount.json?token=AQDKANDWMEUFWJYS27HSGTK67CQOM'
+    deploymentMode: 'Incremental'
+    deploymentName: 'DeployPipelineTemplate'
+    addSpnToEnvironment: true

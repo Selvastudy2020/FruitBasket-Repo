@@ -24,7 +24,7 @@
         "description": "The Runtime stack of current web app"
       }
     },
-	"storageSKU": {
+	 "storageSKU": {
       "type": "string",
       "defaultValue": "Standard_GRS",
       "allowedValues": [
@@ -37,6 +37,10 @@
         "Standard_GZRS",
         "Standard_RAGZRS"
       ],
+      "metadata": {
+        "description": "Specify the storage account type."
+      }
+    },
     "linkedTemplateUri": {
       "type": "string",
       "metadata": {

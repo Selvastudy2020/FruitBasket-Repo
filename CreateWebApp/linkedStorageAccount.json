@@ -8,13 +8,6 @@
         "description": "Specify the storage account name."
       }
     },
-	"resourceTags": {
-        "type": "object",
-        "defaultValue": {
-            "Environment": "Dev",
-            "Project": "Tutorial"
-        }
-    },
     "location": {
       "type": "string",
       "metadata": {
@@ -23,7 +16,7 @@
     },
     "storageSKU": {
       "type": "string",
-      "defaultValue": "Standard_GRS",
+      "defaultValue": "Standard_LRS",
       "allowedValues": [
         "Standard_LRS",
         "Standard_GRS",
@@ -45,7 +38,6 @@
       "apiVersion": "2019-04-01",
       "name": "[parameters('storageAccountName')]",
       "location": "[parameters('location')]",
-	  "tags": "[parameters('resourceTags')]",
       "sku": {
         "name": "[parameters('storageSKU')]"
       },

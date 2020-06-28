@@ -20,7 +20,7 @@ steps:
     location: 'Central US'
     templateLocation: 'Linked artifact'
     csmFile: 'CreateWebApp/azuredeploy.json'
-    overrideParameters: '-projectName fruitbasket -linkedTemplateUri https://fruitbasketstore.blob.core.windows.net/templates/linkedStorageAccount.json?sp=r&st=2020-06-28T17:07:36Z&se=2020-06-29T01:07:36Z&spr=https&sv=2019-10-10&sr=b&sig=uXel3dIVGupMSVl7ZOgNyGyjvF2Pkn7ABRCibSyd%2FcA%3D'
+    overrideParameters: '-projectName fruitbasket -linkedTemplateUri https://raw.githubusercontent.com/Selvastudy2020/FruitBasket-Repo/master/CreateWebApp/linkedStorageAccount.json'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
     addSpnToEnvironment: true

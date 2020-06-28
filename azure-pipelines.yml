@@ -16,11 +16,11 @@ steps:
     azureResourceManagerConnection: 'AzureARMPipeline-Conn'
     subscriptionId: '311a2a45-7155-40c8-984d-1b3d8ca182fb'
     action: 'Create Or Update Resource Group'
-    resourceGroupName: 'AzureARMPipelineRG'
+    resourceGroupName: 'fruitbasketrg'
     location: 'Central US'
     templateLocation: 'Linked artifact'
     csmFile: 'CreateWebApp/azuredeploy.json'
-    overrideParameters: '-projectName fruitbasket -linkedTemplateUri https://raw.githubusercontent.com/Selvastudy2020/FruitBasket-Repo/master/CreateWebApp/linkedStorageAccount.json?token=AQDKANFXX3ENTKHTOM7ZJ2K67DFMK'
+    overrideParameters: '-projectName fruitbasket -linkedTemplateUri https://fruitbasketstore.blob.core.windows.net/templates/linkedStorageAccount.json?sp=r&st=2020-06-28T17:07:36Z&se=2020-06-29T01:07:36Z&spr=https&sv=2019-10-10&sr=b&sig=uXel3dIVGupMSVl7ZOgNyGyjvF2Pkn7ABRCibSyd%2FcA%3D'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
     addSpnToEnvironment: true

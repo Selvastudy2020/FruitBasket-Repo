@@ -20,7 +20,7 @@ steps:
     location: 'East US'
     templateLocation: 'Linked artifact'
     csmFile: 'PracticeTemplates/QuickstartSADeploy.json'
-    overrideParameters: '-storageAccountType '' "Standard_GRS"'
+    overrideParameters: '-storageAccountType Standard_GRS'
     deploymentMode: 'Incremental'
     deploymentName: 'practicedeploayment'
     addSpnToEnvironment: true
